@@ -1,0 +1,17 @@
+apiVersion: v2
+name: generic-app
+description: Generic App for K8s
+type: application
+version: 0.1.0
+icon: https://s3-api.itech.md/public/software_logos/helm.png
+
+keywords:
+  - itech
+  - kubernetes
+  - generic-app
+  - application
+
+home: https://github.com/aloprozam/helm-charts
+maintainers:
+- name: Aloprozam
+  email: lupascu.din@hotmail.com
