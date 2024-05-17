@@ -11,6 +11,10 @@ keywords:
   - generic-app
   - application
 
+sources:
+- https://github.com/aloprozam/helm-charts
+
+
 home: https://github.com/aloprozam/helm-charts
 maintainers:
 - name: Aloprozam
