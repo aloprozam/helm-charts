@@ -36,6 +36,21 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+        {{- if .Values.envFrom }}
+        envFrom:
+        {{- range $value := .Values.envFrom }}
+        {{- if (eq .type "secret") }}
+        - secretRef:
+            {{- if .name }}
+            name: {{ include "application.tplvalues.render" ( dict "value" $value.name "context" $ ) }}
+            {{- else if .nameSuffix }}
+            name: {{ template "application.name" $ }}-{{ include "application.tplvalues.render" ( dict "value" $value.nameSuffix "context" $ ) }}
+            {{- else }}
+            name: {{ template "application.name" $ }}
+            {{- end }}
+        {{- end }}
+        {{- end }}
+        {{- end }}
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}

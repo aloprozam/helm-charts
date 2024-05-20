@@ -23,6 +23,13 @@ serviceAccount:
   # If not set and create is true, a name is generated using the fullname template
   name: ""
 
+
+envFrom: {}
+
+#    postgres-config:
+#      type: secret
+#      nameSuffix: postgres
+
 podAnnotations: {}
 podLabels: {}
 
@@ -43,7 +50,7 @@ service:
 
 ingress:
   enabled: false
-  className: ""
+  className: "nginx"
   annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
