@@ -1,5 +1,8 @@
 # Default values for generic-app.
 
+
+applicationName: "app-01"
+
 replicaCount: 1
 
 image:
@@ -23,12 +26,14 @@ serviceAccount:
   # If not set and create is true, a name is generated using the fullname template
   name: ""
 
+env: {}
+  #  ENVIRONMENT:
+  #     value: "dev"
 
 envFrom: {}
-
-#    postgres-config:
-#      type: secret
-#      nameSuffix: postgres
+  #  secret-ref:
+  #    name: nginx-config
+  #    type: secret
 
 podAnnotations: {}
 podLabels: {}
@@ -54,6 +59,9 @@ ingress:
   annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
+    # cert-manager.io/cluster-issuer: dns01-letsencrypt-prod
+    # nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    # nginx.ingress.kubernetes.io/ssl-passthrough: 'true'
   hosts:
     - host: generic.app.local
       paths:
@@ -87,6 +95,12 @@ autoscaling:
   maxReplicas: 100
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
+
+secrets: {}
+  # - data:
+  #     EMAIL_PASSWORD: abracadabra@example.com
+  #   name: example
+  #   type: Opaque
 
 # Additional volumes on the output Deployment definition.
 volumes: []
