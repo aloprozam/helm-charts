@@ -12,7 +12,7 @@ keywords:
   - application
 
 sources:
-- https://github.com/aloprozam/helm-charts/charts
+- https://github.com/aloprozam/helm-charts
 
 
 home: https://github.com/aloprozam/helm-charts
