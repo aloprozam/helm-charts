@@ -2,7 +2,7 @@ apiVersion: v2
 name: generic-app
 description: Generic App for K8s
 type: application
-version: 0.1.0
+version: 0.2.0
 icon: https://s3-api.itech.md/public/software_logos/helm.png
 
 keywords:
@@ -12,7 +12,7 @@ keywords:
   - application
 
 sources:
-- https://github.com/aloprozam/helm-charts
+- https://github.com/aloprozam/helm-charts/charts/generic-app
 
 
 home: https://github.com/aloprozam/helm-charts

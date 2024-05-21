@@ -2,7 +2,28 @@ apiVersion: v1
 entries:
   generic-app:
   - apiVersion: v2
-    created: "2024-05-21T09:48:46.426170247+03:00"
+    created: "2024-05-21T09:54:45.183030385+03:00"
+    description: Generic App for K8s
+    digest: 20b1cf90bcae78440b5198179ae93bc39e4a5f39e713141b342ddc8148ce273f
+    home: https://github.com/aloprozam/helm-charts
+    icon: https://s3-api.itech.md/public/software_logos/helm.png
+    keywords:
+    - itech
+    - kubernetes
+    - generic-app
+    - application
+    maintainers:
+    - email: lupascu.din@hotmail.com
+      name: Aloprozam
+    name: generic-app
+    sources:
+    - https://github.com/aloprozam/helm-charts/charts/generic-app
+    type: application
+    urls:
+    - https://aloprozam.github.io/helm-charts/assets/generic-app-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    created: "2024-05-21T09:54:45.182158903+03:00"
     description: Generic App for K8s
     digest: e178fa96d92176fad2355a7bd2ee91fb5b7ef46f9d15bc0697470e888e9edf2b
     home: https://github.com/aloprozam/helm-charts
@@ -17,9 +38,9 @@ entries:
       name: Aloprozam
     name: generic-app
     sources:
-    - https://github.com/aloprozam/helm-charts/charts/generi-app
+    - https://github.com/aloprozam/helm-charts
     type: application
     urls:
     - https://aloprozam.github.io/helm-charts/assets/generic-app-0.1.0.tgz
     version: 0.1.0
-generated: "2024-05-21T09:48:46.425141429+03:00"
+generated: "2024-05-21T09:54:45.181046925+03:00"
