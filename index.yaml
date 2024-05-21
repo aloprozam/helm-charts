@@ -17,7 +17,7 @@ entries:
       name: Aloprozam
     name: generic-app
     sources:
-    - https://github.com/aloprozam/helm-charts/charts/generic-app
+    - https://github.com/aloprozam/helm-charts/charts
     type: application
     urls:
     - https://aloprozam.github.io/helm-charts/assets/generic-app-0.2.0.tgz
@@ -38,7 +38,7 @@ entries:
       name: Aloprozam
     name: generic-app
     sources:
-    - https://github.com/aloprozam/helm-charts/charts/generic-app
+    - https://github.com/aloprozam/helm-charts/charts
     type: application
     urls:
     - https://aloprozam.github.io/helm-charts/assets/generic-app-0.1.0.tgz
